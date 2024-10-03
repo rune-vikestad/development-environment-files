@@ -1,0 +1,54 @@
+[alias]
+    # list all aliases
+    aliases = config --get-regexp alias
+
+    # show all contributors for this repository
+    contributors = shortlog --summary --numbered
+
+    # clone a repository including all submodules
+	c = clone --recursive
+
+    # commit with message
+    cm = commit -m
+
+    # abbreviated SHA1, description, and history graph of the latest 32 commits
+    l = log --pretty=oneline -n 32 --graph --abbrev-commit
+
+    # pull remote changes for the current repository and all its submodules
+	p = pull --recurse-submodules
+
+    # show the last commit
+    last = log -1 HEAD --stat
+
+    # rebase 
+    r = rebase
+
+    # show the user email for this repository
+    whoami = config user.email
+
+[core]
+    # set compression level
+    compression = 1
+
+    # set editor
+    editor = vim
+
+	# Make `git rebase` safer on macOS
+	# See http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/ for more information
+    trustctime = false
+
+[hub]
+    protocol = https
+
+[init]
+    defaultBranch = main
+
+[user]
+	name = Rune Vikestad
+	email = rune.vikestad@hotmail.com
+    deltaCacheSize = 2047m 
+    packSizeLimit = 2047m 
+    windowMemory = 2047m
+
+[pack]
+    window = 1
